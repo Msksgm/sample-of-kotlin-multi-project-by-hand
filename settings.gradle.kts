@@ -3,6 +3,13 @@ plugins {
 }
 rootProject.name = "sample-of-kotlin-multi-project-by-hand"
 
+dependencyResolutionManagement {
+  repositories {
+    mavenCentral()
+    gradlePluginPortal()
+  }
+}
+
 include("project-a")
 project(":project-a").projectDir = file("multi-project/project-a")
 
